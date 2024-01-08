@@ -1,0 +1,23 @@
+# kivy_app.kv
+<CustomButton@Button>:
+    background_color: (0, 0.7, 1, 1)  # Light blue background color
+    font_size: 20
+
+<MainScreen>:
+    orientation: 'vertical'
+    
+    Label:
+        text: 'Geohazard App'
+        font_size: 30
+
+    CustomButton:
+        text: 'Load Data'
+        on_press: app.load_data()
+
+    CustomButton:
+        text: 'Visualize Data'
+        on_press: app.visualize_data()
+
+    CustomButton:
+        text: 'Exit'
+        on_press: app.stop()
